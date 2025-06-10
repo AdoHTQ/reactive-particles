@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dadfv2xhjovoc"]
+
+[ext_resource type="Shader" uid="uid://b3jm4i3pehrgq" path="res://shaders/particles/particles.gdshader" id="1_ig7tw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ig7tw"]
+shader = ExtResource("1_ig7tw")
+shader_parameter/intensity = 8.66
+
+[sub_resource type="SphereMesh" id="SphereMesh_0xm2m"]
+radius = 0.1
+height = 0.2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+process_material = SubResource("ShaderMaterial_ig7tw")
+draw_pass_1 = SubResource("SphereMesh_0xm2m")
